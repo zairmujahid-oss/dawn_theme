@@ -8,7 +8,8 @@
   {% if section.settings.image_zoom == 'hover' %}
     data-zoom-on-hover
   {% endif %}
->
+
+  {{ 'voluspa-product.css' | asset_url | stylesheet_tag }}
   {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
   {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
   {{ 'component-price.css' | asset_url | stylesheet_tag }}
@@ -57,10 +58,62 @@
             </h2>
             </a>
             </div>
+            
             {%- when 'buring time:' -%}
                   <div class="burning-time">
-                    <span>{{ product.burning time: }}</span>
+                    <span>{{ product.metafields.custom.burning time:.value }}</span>
                   </div>
+            {%- when 'Sku' -%}
+                  <div class="sku-value">{{ product.metafields.custom.Sku.value}}</div>
+                {%- when 'reviews' -%}
+              <div class="reviews-value">{{ product.metafields.custom.reviews.value}}</div> 
+              {%- when 'description' -%}
+                  {%- if product.description != blank -%}
+                    <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
+                      {{ product.description }}
+                    </div>
+                  {%- endif -%}                
+            {%- when 'price' -%}
+                      <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                        {%- render 'price',
+                          product: product,
+                          use_variant: true,
+                          show_badges: true,
+                          price_class: 'price--large'
+                        -%}
+                      </div>
+                      {% assign original_price = product.selected_or_first_available_variant.price %}
+                    {% assign discount = original_price | times: 10 | divided_by: 100 %}
+                    {% assign discounted_price = original_price | minus: discount %}
+                        {%- if product.quantity_price_breaks_configured? -%}
+                    <div class="price-option pricing-btns selected option">
+                      <div class="pricing-note" id="Volume-Note-{{ section.id }}">
+                      <span>One Time Purchase</span><div class="price"><div class="otp-price">{{ original_price }}</div></div>
+                    </div>
+                    <div class="save">Save 10%</div>
+                    <div class="price-option subscribe">
+                      <p>Subscribe</p><div class="price"><span class="after-discount-price">{{ discounted_price | money_with_currency }}</span> <span class="original-price">{{ original_price }}</span></div>
+                    </div>
+                  </div>
+                  {%- endif -%}
+                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

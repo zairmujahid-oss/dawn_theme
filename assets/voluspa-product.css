@@ -1,0 +1,74 @@
+.h1{
+    font-size: 35px;
+    font-weight: 300;
+    margin-bottom: 15px;
+    letter-spacing: -1.8px;
+}
+.reviews-value{
+    color: #898989;
+    padding-left: 2px;
+    font-size: 13px;
+    font-family: Roboto;
+}
+.sku{
+    font-size: 10px;
+    color: #898989;
+    margin-bottom: 15px;
+}
+.burning-time{
+    font-style: italic;
+    font-size: 14px;
+    margin: 4px 0px 8px 0px;
+}
+.sku-value{
+    font-size: 10px;
+    color: #898989;
+    margin-bottom: 15px;
+}
+.save{
+    background-color: #e6dfd1;
+    font-size: 13px;
+    padding: 3px 11px 4px 12px;
+    position: relative;
+    right: 81px;
+    bottom: 9px;
+    text-align: center;
+    white-space: nowrap;
+    height: 22px;
+    width: fit-content;
+}
+.pricing-btns{
+    display: flex;
+    margin: 23px 0px;
+    width: 100%;
+}
+.price-option{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    border: 1px solid transparent;
+    padding: 17px;
+    justify-content: space-between;
+    column-gap: 3px;
+    letter-spacing: -0.05em;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    flex: 1 0 calc(50% - 12px);
+}
+.selected-option{
+    background-color: #ffffff;
+    border: 1px solid black;
+}
+.pricing-note span .subscribe{
+    font-size: 13px;
+}
+.price{
+    font-size: 11px;
+    display: flex;
+    column-gap: 8px;
+    font-family: Libre Baskerville;
+}
+.original-price{
+    text-decoration: line-through;
+    color: #898989;
+}
