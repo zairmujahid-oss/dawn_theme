@@ -9,12 +9,12 @@
     padding-left: 2px;
     font-size: 13px;
     font-family: Roboto;
+    background-color: aqua;
 }
 .sku{
     font-size: 10px;
     color: #898989;
     margin-bottom: 15px;
-    background-color: aqua;
 }
 .burning_time{
     font-style: italic;
