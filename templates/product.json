@@ -23,8 +23,43 @@
           "type": "title",
           "settings": {}
         },
+        "product_type": {
+          "type": "product_type",
+          "settings": {}
+        },
+        "burning_time": {
+          "type": "burning_time",
+          "settings": {}
+        },
+        "Sku": {
+          "type": "Sku",
+          "settings": {}
+        },
+        "reviews": {
+          "type": "reviews",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "shipping": {
+          "type": "shipping",
+          "settings": {}
+        },
         "price": {
           "type": "price",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "shipping_msg": {
+          "type": "shipping_msg",
           "settings": {}
         },
         "variant_picker": {
@@ -38,17 +73,6 @@
           "type": "quantity_selector",
           "settings": {}
         },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "description": {
-          "type": "description",
-          "settings": {}
-        },
         "share": {
           "type": "share",
           "settings": {
@@ -59,11 +83,17 @@
       "block_order": [
         "vendor",
         "title",
+        "product_type",
+        "burning_time",
+        "Sku",
+        "reviews",
+        "description",
+        "shipping",
         "price",
+        "buy_buttons",
+        "shipping_msg",
         "variant_picker",
         "quantity_selector",
-        "buy_buttons",
-        "description",
         "share"
       ],
       "settings": {
