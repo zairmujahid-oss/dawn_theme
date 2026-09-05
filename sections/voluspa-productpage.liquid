@@ -91,7 +91,7 @@
                       {% assign original_price = product.selected_or_first_available_variant.price %}
                     {% assign discount = original_price | times: 10 | divided_by: 100 %}
                     {% assign discounted_price = original_price | minus: discount %}
-                        {%- if product.quantity_price_breaks_configured? -%}
+
                     <div class="price-option pricing-btns selected option">
                       <div class="pricing-note" id="Volume-Note-{{ section.id }}">
                       <span>One Time Purchase</span><div class="price"><div class="otp-price">{{ original_price }}</div></div>
@@ -101,7 +101,6 @@
                       <p>Subscribe</p><div class="price"><span class="after-discount-price">{{ discounted_price | money_with_currency }}</span> <span class="original-price">{{ original_price }}</span></div>
                     </div>
                   </div>
-                  {%- endif -%}
                   {%- when 'shipping_msg' -%}
               <div class="free-shipping">{{ product.metafields.custom.shipping_msg.value}}</div> 
                 {% endcase %}
@@ -256,33 +255,6 @@
       "type": "price",
       "name": "t:sections.main-product.blocks.price.name",
       "limit": 1
-    },
-    {
-      "type": "sku",
-      "name": "t:sections.main-product.blocks.sku.name",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "select",
-          "id": "text_style",
-          "options": [
-            {
-              "value": "body",
-              "label": "t:sections.main-product.blocks.sku.settings.text_style.options__1.label"
-            },
-            {
-              "value": "subtitle",
-              "label": "t:sections.main-product.blocks.sku.settings.text_style.options__2.label"
-            },
-            {
-              "value": "uppercase",
-              "label": "t:sections.main-product.blocks.sku.settings.text_style.options__3.label"
-            }
-          ],
-          "default": "body",
-          "label": "t:sections.main-product.blocks.sku.settings.text_style.label"
-        }
-      ]
     },
     {
       "type": "inventory",
