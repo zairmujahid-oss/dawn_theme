@@ -24,8 +24,9 @@ pickup-availability[available] {
 }
 
 .pickup-availability-button {
-  background-color: transparent;
+  background-color: black;
   color: rgba(var(--color-foreground), 0.75);
+  color: aliceblue;
   letter-spacing: 0.06rem;
   padding: 0 0 0.2rem;
   text-align: left;
