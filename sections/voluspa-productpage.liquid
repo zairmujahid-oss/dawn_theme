@@ -50,7 +50,8 @@
   {% if section.settings.image_zoom == 'hover' %}
     <script id="EnableZoomOnHover-main" src="{{ 'magnify.js' | asset_url }}" defer="defer"></script>
   {% endif %}
-            {% case block.type %}
+            {%- for block in section.blocks -%}
+            {%- case block.type -%}
             {%- when 'title' -%}
                 <div class="product__title" {{ block.shopify_attributes }}>
             <h1>{{ product.title | escape }}</h1>
@@ -61,9 +62,9 @@
             </a>
             </div>
             
-            {%- when 'buring time:' -%}
+            {%- when 'buring-time:' -%}
                   <div class="burning-time">
-                    <span>{{ product.metafields.custom.burning time:.value }}</span>
+                    <span>{{ product.metafields.custom.burning-time.value }}</span>
                   </div>
             {%- when 'Sku' -%}
                   <div class="sku-value">{{ product.metafields.custom.Sku.value}}</div>
@@ -99,6 +100,7 @@
                   </div>
                   {%- endif -%}
                 {% endcase %}
+              {%- endfor -%}
 
 
 
