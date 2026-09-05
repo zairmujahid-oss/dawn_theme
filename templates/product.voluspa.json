@@ -5,6 +5,8 @@
     }
   },
   "order": [
-    "main"
+    "main",
+    "disclosures",
+    "related-products"
   ]
 }
