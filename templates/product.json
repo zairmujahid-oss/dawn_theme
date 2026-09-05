@@ -10,7 +10,7 @@
 {
   "sections": {
     "main": {
-      "type": "",
+      "type":"voluspa-productpage",
       "blocks": {
         "vendor": {
           "type": "text",
