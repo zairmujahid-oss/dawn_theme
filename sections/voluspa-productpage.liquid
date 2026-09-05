@@ -61,21 +61,24 @@
             </h2>
             </a>
             </div>
-            
+            {%- when 'product_type' -%}
+              <div class="product_type">{{ product.metafields.custom.product_type.value}}</div> 
             {%- when 'burning_time' -%}
-                  <div class="burning_time">
+                  <div class="burningtime">
                     <span>{{ product.metafields.custom.burning_time.value }}</span>
                   </div>
             {%- when 'Sku' -%}
                   <div class="sku-value">{{ product.metafields.custom.Sku.value}}</div>
                 {%- when 'reviews' -%}
-              <div class="reviews-value">{{ product.metafields.custom.reviews.value}}</div> 
-              {%- when 'description' -%}
-                  {%- if product.description != blank -%}
-                    <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
-                      {{ product.description }}
-                    </div>
-                  {%- endif -%}                
+                  <div class="reviews-value">{{ product.metafields.custom.reviews.value}}</div> 
+                {%- when 'description' -%}
+                    {%- if product.description != blank -%}
+                      <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
+                        {{ product.description }}
+                      </div>
+                    {%- endif -%}                                
+                {%- when 'shipping' -%}
+              <div class="free-shipping">{{ product.metafields.custom.shipping.value}}</div> 
             {%- when 'price' -%}
                       <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                         {%- render 'price',
