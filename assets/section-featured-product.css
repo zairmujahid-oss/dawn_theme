@@ -7,7 +7,6 @@
 .featured-product .product-media-container {
   margin-bottom: var(--media-shadow-vertical-offset);
   max-width: 100%;
-  display: flex;
 }
 
 .featured-product .product__media-item {
@@ -17,6 +16,7 @@
 .featured-product .placeholder-svg {
   display: block;
   height: auto;
+  width: 100%;
 }
 
 .background-secondary .featured-product {
