@@ -5,13 +5,15 @@
     cursor: zoom-in;
 }
 .voluspaproduct__media{
-    height: 467px;
-    width: 467px;
+    height: 100%;
+    width: 100%;
     cursor: zoom-in;
 }
-.voluspaproduct__media-list{
-
-}
 .shopify-section{
+    display: flex;
     
+}
+.voluspaproduct__media-list{
+    height: 100px;
+    width: 100px;
 }
