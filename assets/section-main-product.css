@@ -259,6 +259,7 @@ a.product__text {
   font-weight: 300 !important;
   margin-bottom: 15px !important;
   letter-spacing: -1.8px !important;
+  text-transform: uppercase;
 }
 .product__title > * {
   margin: 0;
