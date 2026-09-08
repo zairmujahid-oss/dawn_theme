@@ -13,9 +13,12 @@
     
 }
 .voluspaproduct__media-list{
-    height: 100px;
-    width: 100px;
+    
 }
 .product__media-wrapper{
     display: flex !important;
+}
+.product__media-item{
+    height: 100px;
+    width: 100px;
 }
