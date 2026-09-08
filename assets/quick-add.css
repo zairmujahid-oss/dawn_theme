@@ -338,7 +338,12 @@ quick-add-modal .page-width {
 quick-add-modal .product__title > h1 {
   display: none;
 }
-
+.product__title{
+  font-size: 35px;
+  font-weight: 300;
+  margin-bottom: 15px;
+  letter-spacing: -1.8px;
+}
 quick-add-modal .product__title > a {
   display: block;
   text-decoration: none;
