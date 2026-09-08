@@ -6,14 +6,14 @@
     
     cursor: zoom-in;
 }
-.voluspaproduct__media-list{
+/* .voluspaproduct__media-list{
     height: 700px;
     width: 700px;
-}
+} */
 .product__media-wrapper{
     display: flex !important;
 }
-.product__media-item{
+/* .product__media-item{
     height: 100px;
     width: 100px;
-}
+} */
