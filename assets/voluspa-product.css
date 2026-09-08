@@ -11,6 +11,13 @@
     font-family: Roboto;
     background-color: aqua;
 }
+.product_type{
+    color: #686868;
+    font-size: 17px;
+    margin-bottom: 6px;
+    letter-spacing: -1px;
+    font-weight: 400;
+}
 .sku{
     font-size: 10px;
     color: #898989;
