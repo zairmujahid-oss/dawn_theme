@@ -1,6 +1,5 @@
 .voluspaproduct-media-container{
     display: flex;
-    
     cursor: zoom-in;
 }
 .voluspaproduct__media{
@@ -17,6 +16,6 @@
     display: flex !important;
 }
 .product__media-item{
-    height: 100px;
-    width: 100px;
+    height: ;
+    width: ;
 }
