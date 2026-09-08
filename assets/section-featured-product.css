@@ -3,7 +3,9 @@
   margin: 0;
   padding-bottom: 0;
 }
-
+.product__media-list{
+  width: 500px;
+}
 .featured-product .product-media-container {
   margin-bottom: var(--media-shadow-vertical-offset);
   max-width: 100%;
