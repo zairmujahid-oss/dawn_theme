@@ -9,9 +9,9 @@
 .shopify-section{
     
 }
-/* .voluspaproduct__media-list{
-    
-} */
+.voluspaproduct__media-list{
+    width: 700px;
+}
 .product__media-wrapper{
     display: flex !important;
 }
