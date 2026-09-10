@@ -83,8 +83,8 @@ collection-component {
 
 .page-width {
   max-width: var(--page-width);
-  /* margin: 0 auto;
-  padding: ; */
+  margin: 0 15px;
+  /* padding: ; */
 }
 
 body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
