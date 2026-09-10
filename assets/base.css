@@ -82,7 +82,7 @@ collection-component {
 /* base */
 
 .page-width {
-  max-width: var(--page-width);
+  /* max-width: var(--page-width); */
   margin: 0 15px;
   /* padding: ; */
 }
