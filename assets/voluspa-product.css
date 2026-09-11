@@ -82,7 +82,7 @@
     background-color: #ffffff;
     border: 1px solid black;
 }
-.pricing-note span .subscribe p{
+.pricing-note, .subscribe{
     letter-spacing: -0.05em;
     font-size: 13px;
 }
