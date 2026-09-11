@@ -120,7 +120,7 @@
                     {% assign discount = original_price | times: 10 | divided_by: 100 %}
                     {% assign discounted_price = original_price | minus: discount %}
 
-                    <div class="price-option pricing-btns selected option">
+                    <div class="price-option pricing-btns selected-option">
                       <div class="pricing-note" id="Volume-Note-{{ section.id }}">
                       <span>One Time Purchase</span><div class="otp-price">{{ original_price | money }}</div>
                     </div>

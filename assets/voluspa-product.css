@@ -86,6 +86,10 @@
     letter-spacing: -0.05em;
     font-size: 13px;
 }
+.selected-option{
+    background-color: #ffffff;
+    border: 1px solid black;
+}
 .product_price{
     font-size: 12px;
     display: flex;
