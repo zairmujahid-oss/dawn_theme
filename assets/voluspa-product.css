@@ -45,8 +45,8 @@
 }
 .pricing-note, .subscribe{
     display: flex;
-    align-items: center
-    gap: 23px;
+    align-items: center;
+    gap: 17px;
 }
 .save{
     background-color: #e6dfd1;
@@ -82,7 +82,8 @@
     background-color: #ffffff;
     border: 1px solid black;
 }
-.pricing-note span .subscribe{
+.pricing-note span .subscribe p{
+    letter-spacing: -0.05em;
     font-size: 13px;
 }
 .product_price{
