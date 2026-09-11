@@ -10,7 +10,7 @@
 {
   "sections": {
     "main": {
-      "type":"voluspa-productpage",
+      "type": "voluspa-productpage",
       "blocks": {
         "vendor": {
           "type": "text",
@@ -32,7 +32,7 @@
           "settings": {}
         },
         "Sku": {
-          "type": "Sku",
+          "type": "sku",
           "settings": {}
         },
         "reviews": {
@@ -85,7 +85,6 @@
         "title",
         "product_type",
         "burning_time",
-        "Sku",
         "reviews",
         "description",
         "shipping",
