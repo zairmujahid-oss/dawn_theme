@@ -32,7 +32,7 @@
           "settings": {}
         },
         "Sku": {
-          "type": "Sku",
+          "type": "sku",
           "settings": {}
         },
         "reviews": {
