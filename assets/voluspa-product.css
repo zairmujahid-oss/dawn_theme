@@ -85,6 +85,7 @@
 .pricing-note, .subscribe{
     letter-spacing: -0.05em;
     font-size: 13px;
+    border: 1px solid transparent;
 }
 .selected-option{
     background-color: #ffffff;
