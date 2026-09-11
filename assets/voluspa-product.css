@@ -43,7 +43,7 @@
     color: black;
     font-style: italic;
 }
-.pricing-note, .Subscribe{
+.pricing-note, .subscribe{
     display: flex;
     align-items: center
     gap: 23px;
