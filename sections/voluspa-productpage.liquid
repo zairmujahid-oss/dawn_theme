@@ -107,12 +107,12 @@
                   <div class="sku-value">{{ product.metafields.custom.sku}}</div>
                 {%- when 'reviews' -%}
                   <div class="reviews-value">{{ product.metafields.custom.reviews.value}}</div> 
-                {% comment %} {%- when 'description' -%}
+                {%- when 'description' -%}
                     {%- if product.description != blank -%}
                       <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
                         {{ product.description }}
                       </div>
-                    {%- endif -%}                                 {% endcomment %}
+                    {%- endif -%}
                 {%- when 'shipping' -%}
               <div class="free-shipping">{{ product.metafields.custom.shipping.value}}</div> 
             {%- when 'price' -%}
