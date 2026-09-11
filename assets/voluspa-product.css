@@ -43,6 +43,10 @@
     color: black;
     font-style: italic;
 }
+.pricing-note, .subscribe{
+    display: flex;
+    align-items: center
+}
 .save{
     background-color: #e6dfd1;
     font-size: 13px;
@@ -80,7 +84,7 @@
 .pricing-note span .subscribe{
     font-size: 13px;
 }
-.price{
+.product_price{
     font-size: 11px;
     display: flex;
     column-gap: 8px;
