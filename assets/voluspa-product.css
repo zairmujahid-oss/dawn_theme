@@ -4,7 +4,6 @@
     padding-left: 2px;
     font-size: 13px;
     font-family: Roboto;
-    background-color: aqua;
 }
 .product_type{
     color: #686868;
@@ -13,11 +12,7 @@
     letter-spacing: -1px;
     font-weight: 400;
 }
-.sku{
-    font-size: 10px;
-    color: #898989;
-    margin-bottom: 15px;
-}
+
 .burning_time{
     font-style: italic;
     font-size: 14px;
