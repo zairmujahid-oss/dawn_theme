@@ -34,8 +34,12 @@
     font-weight: 400;
     letter-spacing: -0.05em;
     line-height: 28px;
-    color: black;
+    color: #000;
     text-align: center;
+}
+.free-shipping{
+    margin-top: 24px;
+    
 }
 .save{
     background-color: #e6dfd1;
