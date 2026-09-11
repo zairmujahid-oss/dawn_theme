@@ -4,6 +4,7 @@
     padding-left: 2px;
     font-size: 13px;
     font-family: Roboto;
+    line-height: normal;
 }
 .product_type{
     color: #686868;
@@ -19,16 +20,19 @@
     font-size: 15px;
     margin: 4px 0px 8px 0px;
     color: black;
+    line-height: normal;
 }
 .sku-value{
     font-size: 10px;
     color: #898989;
     margin-bottom: 15px;
+    line-height: normal
 }
 .product__description{
     font-size: 15px;
     font-weight: 400;
     letter-spacing: -0.05em;
+    line-height: normal;
 }
 .save{
     background-color: #e6dfd1;
