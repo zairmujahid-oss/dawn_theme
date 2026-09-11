@@ -33,7 +33,9 @@
     font-size: 17px;
     font-weight: 400;
     letter-spacing: -0.05em;
-    line-height: normal;
+    line-height: 28px;
+    color: black;
+    text-align: center;
 }
 .save{
     background-color: #e6dfd1;
