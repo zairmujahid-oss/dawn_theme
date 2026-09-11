@@ -11,12 +11,14 @@
     margin-bottom: 6px;
     letter-spacing: -1px;
     font-weight: 400;
+    line-height: normal;
 }
 
 .burning_time{
     font-style: italic;
-    font-size: 14px;
+    font-size: 15px;
     margin: 4px 0px 8px 0px;
+    color: black;
 }
 .sku-value{
     font-size: 10px;
