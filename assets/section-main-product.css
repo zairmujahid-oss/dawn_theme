@@ -175,6 +175,8 @@ product-info {
   max-width: 44rem;
   min-width: fit-content;
   border: none;
+  display: flex;
+  align-items: center;
 }
 
 .product-form__input .form__label {
