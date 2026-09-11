@@ -39,7 +39,9 @@
 }
 .free-shipping{
     margin-top: 24px;
-    
+    font-size: 15px;
+    color: black;
+    font-style: italic;
 }
 .save{
     background-color: #e6dfd1;
