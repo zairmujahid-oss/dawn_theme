@@ -65,7 +65,11 @@
     margin: 23px 0px;
     width: 100%;
 }
-.price-option{
+.selected-option{
+    background-color: #ffffff;
+    border: 1px solid black;
+}
+.pricing-note, .subscribe{
     display: flex;
     align-items: center;
     font-size: 15px;
@@ -76,16 +80,6 @@
     background-color: #f5f5f5;
     cursor: pointer;
     flex: 1 0 calc(50% - 12px);
-}
-.selected-option{
-    background-color: #ffffff;
-    border: 1px solid black;
-}
-.pricing-note, .subscribe{
-    letter-spacing: -0.05em;
-    font-size: 13px;
-    border: 1px solid transparent;
-    padding: 17px;
 }
 .selected-option{
     background-color: #ffffff;
