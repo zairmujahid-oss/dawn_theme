@@ -96,3 +96,13 @@
     text-decoration: line-through;
     color: #898989;
 }
+.free-shipping{
+    width: 100%;
+    padding: 7px 20px;
+    border-radius: 0px;
+    border: none;
+    cursor: pointer;
+    background-color: #f8f5f0;
+    color: #656565;
+    font-size: 13px;
+}
