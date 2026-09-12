@@ -171,7 +171,7 @@ product-info {
 .product-form__input {
   flex: 0 0 100%;
   padding: 0;
-  max-width: 44rem;
+  max-width: 50rem;
   min-width: fit-content;
   border: none;
   display: flex;
@@ -179,6 +179,7 @@ product-info {
   width: 100%;
   display: flex;
   margin: 20px 0px;
+  justify-content: space-between;
   column-gap: 29px;
 }
 
@@ -200,9 +201,11 @@ product-info {
   font-size: 15px;
   padding: 5px 20px;
   border: none;
+  text-transform: uppercase;
   cursor: pointer;
-  flex: 1 0 calc(50% - 12px);
+  /* flex: 1 0 calc(50% - 12px); */
   height: 42px;
+  min-width: 32rem;
 }
 
 .shopify-payment-button .shopify-payment-button__button[disabled],
