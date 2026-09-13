@@ -1,0 +1,89 @@
+{%- unless product.has_only_default_variant -%}
+
+  <variant-selects
+    id="variant-selects-{{ section.id }}"
+    data-section="{{ section.id }}"
+    data-product-handle="{{ product.handle }}"
+    data-product-title="{{ product.title | escape }}"
+    data-product-id="{{ product.id }}"
+    data-currency-code="{{ cart.currency.iso_code }}"
+    data-selected-price-amount="{{ product.selected_or_first_available_variant.price | default: 0 | money_amount | escape }}"
+    {{ block.shopify_attributes }}
+  >
+
+    <div class="product-options">
+
+      <h3 class="product-options__title">
+        PRODUCT OPTIONS:
+      </h3>
+
+      <div class="product-options__grid">
+
+        {%- for variant in product.variants -%}
+
+          <label
+            class="product-option-card
+              {% if variant.id == product.selected_or_first_available_variant.id %}
+                product-option-card--selected
+              {% endif %}
+            "
+          >
+
+            <input
+              type="radio"
+              name="id"
+              value="{{ variant.id }}"
+              form="{{ product_form_id }}"
+              {% if variant.id == product.selected_or_first_available_variant.id %}
+                checked
+              {% endif %}
+            >
+
+            <div class="product-option-card__image">
+
+              {%- if variant.featured_image -%}
+
+                {{
+                  variant.featured_image
+                  | image_url: width: 400
+                  | image_tag:
+                    loading: 'lazy'
+                  }}
+                  
+              {%- elsif product.featured_image -%}
+
+                {{
+                  product.featured_image
+                  | image_url: width: 400
+                  | image_tag:
+                    loading: 'lazy'
+                  }}
+
+              {%- endif -%}
+
+            </div>
+
+            <div class="product-option-card__name">
+              {{ variant.title }}
+            </div>
+
+            <div class="product-option-card__price">
+              {{ variant.price | money }}
+            </div>
+
+          </label>
+
+        {%- endfor -%}
+
+      </div>
+
+    </div>
+
+
+    <script type="application/json" data-selected-variant>
+      {{ product.selected_or_first_available_variant | json }}
+    </script>
+
+  </variant-selects>
+
+{%- endunless -%}
