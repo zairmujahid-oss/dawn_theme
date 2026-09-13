@@ -351,8 +351,8 @@
                   </div>
                   {%- when 'shipping_msg' -%}
               <div class="shipping-msg">{{ product.metafields.custom.shipping_msg.value}}</div>
-              {%- when 'voluspa-variant-picker' -%}
-                  {% render 'product-variant-picker',
+              {%- when 'variant_picker' -%}
+                  {% render 'voluspa-variant-picker',
                     product: product,
                     block: block,
                     product_form_id: product_form_id
