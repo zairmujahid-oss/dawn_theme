@@ -1,89 +1,51 @@
-{%- unless product.has_only_default_variant -%}
+document.addEventListener('change', function (event) {
 
-  <variant-selects
-    id="variant-selects-{{ section.id }}"
-    data-section="{{ section.id }}"
-    data-product-handle="{{ product.handle }}"
-    data-product-title="{{ product.title | escape }}"
-    data-product-id="{{ product.id }}"
-    data-currency-code="{{ cart.currency.iso_code }}"
-    data-selected-price-amount="{{ product.selected_or_first_available_variant.price | default: 0 | money_amount | escape }}"
-    {{ block.shopify_attributes }}
-  >
+  const radio = event.target.closest(
+    '.product-option-card input[type="radio"]'
+  );
 
-    <div class="product-options">
+  if (!radio) return;
 
-      <h3 class="product-options__title">
-        PRODUCT OPTIONS:
-      </h3>
+  const card = radio.closest('.product-option-card');
 
-      <div class="product-options__grid">
+  // Remove selected class from all cards
+  document
+    .querySelectorAll('.product-option-card')
+    .forEach((item) => {
+      item.classList.remove('product-option-card--selected');
+    });
 
-        {%- for variant in product.variants -%}
+  // Add selected class to clicked card
+  card.classList.add('product-option-card--selected');
 
-          <label
-            class="product-option-card
-              {% if variant.id == product.selected_or_first_available_variant.id %}
-                product-option-card--selected
-              {% endif %}
-            "
-          >
+  // Get selected variant ID
+  const variantId = radio.value;
 
-            <input
-              type="radio"
-              name="id"
-              value="{{ variant.id }}"
-              form="{{ product_form_id }}"
-              {% if variant.id == product.selected_or_first_available_variant.id %}
-                checked
-              {% endif %}
-            >
+  console.log('Selected variant ID:', variantId);
 
-            <div class="product-option-card__image">
+  // Get the product form directly from the input
+  const formId = radio.getAttribute('form');
 
-              {%- if variant.featured_image -%}
+  const productForm = document.getElementById(formId);
 
-                {{
-                  variant.featured_image
-                  | image_url: width: 400
-                  | image_tag:
-                    loading: 'lazy'
-                  }}
-                  
-              {%- elsif product.featured_image -%}
+  if (!productForm) {
+    console.log('Product form not found:', formId);
+    return;
+  }
 
-                {{
-                  product.featured_image
-                  | image_url: width: 400
-                  | image_tag:
-                    loading: 'lazy'
-                  }}
+  // Find Shopify variant ID input
+  const variantInput = productForm.querySelector(
+    'input[name="id"]'
+  );
 
-              {%- endif -%}
+  if (!variantInput) {
+    console.log('Variant input not found');
+    return;
+  }
 
-            </div>
+  // Change selected variant
+  variantInput.value = variantId;
 
-            <div class="product-option-card__name">
-              {{ variant.title }}
-            </div>
+  console.log('Product form variant changed to:', variantInput.value);
 
-            <div class="product-option-card__price">
-              {{ variant.price | money }}
-            </div>
-
-          </label>
-
-        {%- endfor -%}
-
-      </div>
-
-    </div>
-
-
-    <script type="application/json" data-selected-variant>
-      {{ product.selected_or_first_available_variant | json }}
-    </script>
-
-  </variant-selects>
-
-{%- endunless -%}
+});
