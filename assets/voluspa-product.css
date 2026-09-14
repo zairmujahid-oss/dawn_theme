@@ -210,7 +210,7 @@
 }
 
 .accordion-icon {
-  background-image: url("{{ 'down-arrow.png' | asset_url }}");
+  background-image: url("https://voluspa.com/cdn/shop/t/348/assets/down-chevron.png?v=80580581999820511001711040485");
   background-repeat: no-repeat;
   background-position: right 10px center;
   background-size: 12px;
