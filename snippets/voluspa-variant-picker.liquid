@@ -1,0 +1,109 @@
+{%- unless product.has_only_default_variant -%}
+
+  <variant-selects
+    id="variant-selects-{{ section.id }}"
+    data-section="{{ section.id }}"
+    data-product-handle="{{ product.handle }}"
+    data-product-title="{{ product.title | escape }}"
+    data-product-id="{{ product.id }}"
+    data-currency-code="{{ cart.currency.iso_code }}"
+    data-selected-price-amount="{{ product.selected_or_first_available_variant.price | default: 0 | money_amount | escape }}"
+    {{ block.shopify_attributes }}
+  >
+
+    {%- for option in product.options_with_values -%}
+
+      <fieldset class="product-variant-cards">
+
+        <legend class="form__label">
+          {{ option.name }}
+        </legend>
+
+        <div class="variant-card-grid">
+
+          {%- for value in option.values -%}
+
+            {%- assign option_index = forloop.parentloop.index0 -%}
+
+            {%- assign matching_variant = blank -%}
+
+            {%- for variant in product.variants -%}
+              {%- if variant.options[option_index] == value -%}
+                {%- assign matching_variant = variant -%}
+                {%- break -%}
+              {%- endif -%}
+            {%- endfor -%}
+
+            <label
+              class="variant-card
+              {% if matching_variant.id == product.selected_or_first_available_variant.id %}
+                variant-card--selected
+              {% endif %}"
+            >
+
+              <input
+                type="radio"
+                name="options[{{ option.name | escape }}]"
+                value="{{ value | escape }}"
+                form="{{ product_form_id }}"
+                {% if matching_variant.id == product.selected_or_first_available_variant.id %}
+                  checked
+                {% endif %}
+              >
+
+              <div class="variant-card__image">
+
+                {%- if matching_variant.featured_image -%}
+
+                  {{
+                    matching_variant.featured_image
+                    | image_url: width: 400
+                    | image_tag:
+                      loading: 'lazy',
+                      widths: '200, 300, 400',
+                      sizes: '(min-width: 750px) 150px, 100px'
+                  }}
+
+                {%- elsif product.featured_image -%}
+
+                  {{
+                    product.featured_image
+                    | image_url: width: 400
+                    | image_tag:
+                      loading: 'lazy'
+                  }}
+
+                {%- endif -%}
+
+              </div>
+
+              <div class="variant-card__info">
+
+                <div class="variant-card__title">
+                  {{ value }}
+                </div>
+
+                {%- if matching_variant != blank -%}
+                  <div class="variant-card__price">
+                    {{ matching_variant.price | money }}
+                  </div>
+                {%- endif -%}
+
+              </div>
+
+            </label>
+
+          {%- endfor -%}
+
+        </div>
+
+      </fieldset>
+
+    {%- endfor -%}
+
+
+    <script src="{{ 'voluspa-variant-picker.js' | asset_url }}" defer="defer"></script>
+
+  </variant-selects>
+
+{%- endunless -%}
