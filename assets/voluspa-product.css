@@ -184,7 +184,7 @@
   outline-offset: 4px;
 }
 .product-description-accordion {
-  width: 100%;
+  width: 80%;
   margin-top: 30px;
 }
 
@@ -195,27 +195,20 @@
 .accordion-item:last-child {
   border-bottom: 1px solid #ddd;
 }
-
 .accordion-button {
-  width: 100%;
-  border: 0;
-  background: transparent;
-  padding: 18px 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  font-size: 14px;
-  text-align: left;
+    color: #000;
+    font-family: 'Work Sans' !important;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: -0.8px;
+    font-style: normal;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 12px 25px 12px 15px;
+    background: unset;
+    width: 100%;
+    text-align: left;
 }
-
-.accordion-icon {
-  background-image: url("https://voluspa.com/cdn/shop/t/348/assets/down-chevron.png?v=80580581999820511001711040485");
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  background-size: 12px;
-}
-
 .accordion-content {
   display: none;
   padding: 0 15px 20px;
