@@ -11,98 +11,78 @@
     {{ block.shopify_attributes }}
   >
 
-    {%- for option in product.options_with_values -%}
+    <div class="product-options">
 
-      <fieldset class="product-variant-cards">
+      <h3 class="product-options__title">
+        PRODUCT OPTIONS:
+      </h3>
 
-        <legend class="form__label">
-          {{ option.name }}
-        </legend>
+      <div class="product-options__grid">
 
-        <div class="variant-card-grid">
+        {%- for variant in product.variants -%}
 
-          {%- for value in option.values -%}
+          <label
+            class="product-option-card
+              {% if variant.id == product.selected_or_first_available_variant.id %}
+                product-option-card--selected
+              {% endif %}
+            "
+          >
 
-            {%- assign option_index = forloop.parentloop.index0 -%}
-
-            {%- assign matching_variant = blank -%}
-
-            {%- for variant in product.variants -%}
-              {%- if variant.options[option_index] == value -%}
-                {%- assign matching_variant = variant -%}
-                {%- break -%}
-              {%- endif -%}
-            {%- endfor -%}
-
-            <label
-              class="variant-card
-              {% if matching_variant.id == product.selected_or_first_available_variant.id %}
-                variant-card--selected
-              {% endif %}"
+            <input
+              type="radio"
+              name="id"
+              value="{{ variant.id }}"
+              form="{{ product_form_id }}"
+              {% if variant.id == product.selected_or_first_available_variant.id %}
+                checked
+              {% endif %}
             >
 
-              <input
-                type="radio"
-                name="options[{{ option.name | escape }}]"
-                value="{{ value | escape }}"
-                form="{{ product_form_id }}"
-                {% if matching_variant.id == product.selected_or_first_available_variant.id %}
-                  checked
-                {% endif %}
-              >
+            <div class="product-option-card__image">
 
-              <div class="variant-card__image">
+              {%- if variant.featured_image -%}
 
-                {%- if matching_variant.featured_image -%}
+                {{
+                  variant.featured_image
+                  | image_url: width: 400
+                  | image_tag:
+                    loading: 'lazy'
+                  }}
+                  
+              {%- elsif product.featured_image -%}
 
-                  {{
-                    matching_variant.featured_image
-                    | image_url: width: 400
-                    | image_tag:
-                      loading: 'lazy',
-                      widths: '200, 300, 400',
-                      sizes: '(min-width: 750px) 150px, 100px'
+                {{
+                  product.featured_image
+                  | image_url: width: 400
+                  | image_tag:
+                    loading: 'lazy'
                   }}
 
-                {%- elsif product.featured_image -%}
+              {%- endif -%}
 
-                  {{
-                    product.featured_image
-                    | image_url: width: 400
-                    | image_tag:
-                      loading: 'lazy'
-                  }}
+            </div>
 
-                {%- endif -%}
+            <div class="product-option-card__name">
+              {{ variant.title }}
+            </div>
 
-              </div>
+            <div class="product-option-card__price">
+              {{ variant.price | money }}
+            </div>
 
-              <div class="variant-card__info">
+          </label>
 
-                <div class="variant-card__title">
-                  {{ value }}
-                </div>
+        {%- endfor -%}
 
-                {%- if matching_variant != blank -%}
-                  <div class="variant-card__price">
-                    {{ matching_variant.price | money }}
-                  </div>
-                {%- endif -%}
+      </div>
 
-              </div>
-
-            </label>
-
-          {%- endfor -%}
-
-        </div>
-
-      </fieldset>
-
-    {%- endfor -%}
+    </div>
 
 
-    <script src="{{ 'voluspa-variant-picker.js' | asset_url }}" defer="defer"></script>
+    <script type="application/json" data-selected-variant>
+      {{ product.selected_or_first_available_variant | json }}
+    </script>
 
   </variant-selects>
 
