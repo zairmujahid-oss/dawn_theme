@@ -357,6 +357,8 @@
                     block: block,
                     product_form_id: product_form_id
                   %}
+                {%- when 'main_description' -%}
+
                   {%- endcase -%}
               {%- endfor -%}
 
@@ -627,6 +629,11 @@
           "default": "circle"
         }
       ]
+    },
+    {
+    "type": "main_description",
+    "name": "Main Description",
+    "settings": []
     },
     {
       "type": "description",

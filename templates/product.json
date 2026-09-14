@@ -73,6 +73,10 @@
             "swatch_shape": "circle"
           }
         },
+        "main_description": {
+          "type": "main_description",
+          "settings": {}
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -94,6 +98,7 @@
         "buy_buttons",
         "shipping_msg",
         "variant_picker",
+        "main_description",
         "share"
       ],
       "settings": {
