@@ -172,6 +172,8 @@ product-info {
 .product-form__input {
   width: 100%;
   display: flex;
+  margin: 23px 0px;
+  gap: 0px 13px;
 }
 
 .product-form__input .form__label {
