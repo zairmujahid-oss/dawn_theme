@@ -177,6 +177,8 @@ product-info {
   border: none;
   align-items: center;
   width: 100%;
+  color: #ffffff;
+  background-color: #000;
   justify-content: flex-start;
   column-gap: 29px;
   margin: 20px 0px;
