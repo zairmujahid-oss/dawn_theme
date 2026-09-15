@@ -205,6 +205,9 @@ product-info {
     transition: background 1000ms ease-in-out, color 300ms ease-in-out;
     text-transform: uppercase;
 }
+@media and (max-width: 1091px;){
+  flex: 1 0 calc(50% - 12px);
+}
 
 .shopify-payment-button .shopify-payment-button__button[disabled],
 .product-form__submit[disabled] + .shopify-payment-button .shopify-payment-button__button[disabled] {
