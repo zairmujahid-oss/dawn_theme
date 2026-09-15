@@ -222,4 +222,9 @@
 .accordion-item.active .accordion-content {
   display: block;
 }
+@media and (max-width: 1091px;){
+.product-form__submit{
+  min-width: 30rem;
+}
+}
 
