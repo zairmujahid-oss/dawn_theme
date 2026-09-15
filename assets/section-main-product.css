@@ -174,8 +174,8 @@ product-info {
   max-width: 50rem;
   min-width: fit-content;
   border: none;
-  align-items: center;
-  width: 100%;*/
+  align-items: center;*/
+  width: 100%;
   justify-content: flex-start;
   column-gap: 29px;
   margin: 20px 0px;
@@ -186,11 +186,11 @@ product-info {
   padding-left: 0;
 }
 
-.product-form__input .select {
+.select {
   max-width: 100%;
 }
 
-.product-form__input .svg-wrapper {
+.svg-wrapper {
   right: 1.5rem;
 }
 
