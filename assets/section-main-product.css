@@ -176,8 +176,8 @@ product-info {
   border: none;
   align-items: center;
   width: 100%; */
-  /* justify-content: space-between;
-  column-gap: 29px; */
+  /* justify-content: space-between;*/
+  column-gap: 29px;
   margin: 20px 0px;
   display: flex;
 }
