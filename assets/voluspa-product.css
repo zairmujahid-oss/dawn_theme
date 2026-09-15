@@ -224,7 +224,7 @@
 }
 @media and (max-width: 1091px;){
 .product-form__submit{
-  min-width: 28rem !important;
+  flex; 1 0 calc(50% - 12px);
 }
 }
 
