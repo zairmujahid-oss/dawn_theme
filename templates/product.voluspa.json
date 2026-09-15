@@ -10,7 +10,7 @@
 {
   "sections": {
     "main": {
-      "type":"voluspa-productpage",
+      "type": "voluspa-productpage",
       "blocks": {
         "vendor": {
           "type": "text",
@@ -32,7 +32,7 @@
           "settings": {}
         },
         "Sku": {
-          "type": "Sku",
+          "type": "sku",
           "settings": {}
         },
         "reviews": {
@@ -85,7 +85,6 @@
         "title",
         "product_type",
         "burning_time",
-        "Sku",
         "reviews",
         "description",
         "shipping",
@@ -106,7 +105,7 @@
         "mobile_thumbnails": "hide",
         "media_position": "left",
         "image_zoom": "lightbox",
-        "hide_variants": true,
+        "hide_variants": "false",
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 12
