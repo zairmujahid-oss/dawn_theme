@@ -70,3 +70,16 @@ document.addEventListener('change', function (event) {
   mainImage.srcset = '';
 
 });
+const selectedVariant = variants.find(variant => {
+  return variant.options.every((option, index) => {
+    return option === selectedOptions[index];
+  });
+});
+
+// 2. Change price
+if (selectedVariant) {
+  priceElement.textContent = Shopify.formatMoney(
+    selectedVariant.price,
+    window.Shopify.money_format
+  );
+}
