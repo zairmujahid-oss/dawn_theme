@@ -169,17 +169,17 @@ product-info {
 
 /* Form Elements */
 .product-form__input {
-  flex: 0 0 100%;
+  /* flex: 0 0 100%;
   padding: 0;
   max-width: 50rem;
   min-width: fit-content;
   border: none;
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 100%; */
+  /* justify-content: space-between;
+  column-gap: 29px; */
   margin: 20px 0px;
-  justify-content: space-between;
-  column-gap: 29px;
 
 }
 
