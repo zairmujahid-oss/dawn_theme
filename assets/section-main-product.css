@@ -174,13 +174,12 @@ product-info {
   max-width: 50rem;
   min-width: fit-content;
   border: none;
-  display: flex;
   align-items: center;
   width: 100%; */
   /* justify-content: space-between;
   column-gap: 29px; */
   margin: 20px 0px;
-
+  display: flex;
 }
 
 .product-form__input .form__label {
