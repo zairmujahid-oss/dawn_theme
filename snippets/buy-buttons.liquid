@@ -70,7 +70,7 @@
               assign quantity_rule_soldout = true
             endif
           -%}
-          <button
+          <div
             id="ProductSubmitButton-{{ section_id }}"
             type="submit"
             name="add"
@@ -92,7 +92,7 @@
               {%- endif -%}
             </span>
             {%- render 'loading-spinner' -%}
-          </button>
+          </div>
         </div>
       {%- endform -%}
     </product-form>
