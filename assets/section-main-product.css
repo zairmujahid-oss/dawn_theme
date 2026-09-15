@@ -170,16 +170,7 @@ product-info {
 
 /* Form Elements */
 .product-form__input {
-  flex: 0 0 100%;
-  padding: 0;
-  max-width: 50rem;
-  min-width: fit-content;
-  border: none;
-  align-items: center;
   width: 100%;
-  justify-content: flex-start;
-  column-gap: 29px;
-  margin: 20px 0px;
   display: flex;
 }
 
