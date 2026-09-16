@@ -222,9 +222,37 @@
 .accordion-item.active .accordion-content {
   display: block;
 }
-@media and (max-width: 1091px;){
+@media only screen and (max-width: 1091px){
 .product-form__submit{
-  flex; 1 0 calc(50% - 12px);
+  flex: 1 0 calc(50% - 12px);
 }
 }
+@media only screen and (max-width : 555px){
+.product_type{
+      font-size: 15px;
+}
+.burning_time{
+  font-size: 12px;
+}
+.sku-value{
+  font-size: 9px;
+}
+.product__description{
+  line-height: 18px;
+  font-size: 13px;
+}
+.free-shipping{
+  font-size: 12px;
+}
+.pricing-note{
+  font-size: 12px;
+}
+.shipping-msg{
+  font-size: 9px;
+}
+.accordion-button{
+  font-size: 12px;
+}
+}
+
 
