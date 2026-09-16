@@ -312,6 +312,7 @@ a.product__text {
 @media screen and (min-width: 750px) {
   .product__info-container {
     max-width: 60rem;
+    text-align: center;
   }
 
   .product__info-container .price--on-sale .price-item--regular {
