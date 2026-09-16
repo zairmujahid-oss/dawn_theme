@@ -2006,7 +2006,7 @@ input[type='checkbox'] {
 }
 
 .quantity__input[type='number'] {
-  -moz-appearance: textfield;
+  --moz-appearance: textfield;
 }
 
 .quantity__rules {
