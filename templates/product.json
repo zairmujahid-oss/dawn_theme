@@ -91,6 +91,7 @@
         "burning_time",
         "Sku",
         "reviews",
+        "rating",
         "description",
         "shipping",
         "price",
